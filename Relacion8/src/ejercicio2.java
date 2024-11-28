@@ -32,10 +32,9 @@ public class ejercicio2 {
 
     public static void main(String[] args) {
     Scanner entrada = new Scanner(System.in);
-        int n;
 
     System.out.println("Introduce un número:");
-    n = entrada.nextInt();
+    int n = entrada.nextInt();
     System.out.println("Los números en palabras serían: " + convierteEnPalabras(n));
     }
 }
