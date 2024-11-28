@@ -13,6 +13,7 @@ public class ejercicio2 {
     // coma detrás de cada palabra salvo al final.
 
     static String convierteEnPalabras(int n){
+        //creamos un arraid para guardar como se escribe cada numero
         String[] nombres_numeros = {"cero","uno","dos","tres","cuatro","cinco","seis","siete","ocho","nueve"};
             String cadena = String.valueOf(n);
             String nombres = "";
