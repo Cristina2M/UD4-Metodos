@@ -44,12 +44,12 @@ public class ejercicio5 {
             b[i] = num2; //en el array b, en la casilla i, se introduce el valor
         }
 
-        int[] resultado = concatena (a,b);
+        int[] d = concatena (a,b);
         //mostramos por pantalla el resultado, hay que imprimir casilla por casilla
-        System.out.print("Unidos serian: ");
-        for (int i = 0; i < resultado.length; i++) {
-            System.out.print(resultado[i]);
-            if (i<resultado.length-1) {
+        System.out.print("Concatenados serian: ");
+        for (int i = 0; i < d.length; i++) {
+            System.out.print(d[i]);
+            if (i<d.length-1) {
                 System.out.print(", ");
             }
             else{
