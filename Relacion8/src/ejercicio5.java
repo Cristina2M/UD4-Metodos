@@ -9,15 +9,15 @@ public class ejercicio5 {
 
 
     static int[] concatena(int[] a, int[] b){
-        String numero="";
+        int[] c= new int [a.length + b.length];//hacemos un 3º array que almacene a los dos
+
         for (int i = 0; i < a.length; i++) {
-            numero += a[i];
+            c[i]=a[i];
         }
-        for (int i = 0; i < b.length; i++) {
-            numero += b[i];
+        for (int i = 0; i <b.length; i++) {
+            c[i+a.length]=b[i];
         }
-        int total[] = {Integer.parseInt(numero)};
-        return total;
+        return c;
     }
 
     public static void main(String[] args) {
@@ -28,7 +28,6 @@ public class ejercicio5 {
         int tamaño1 = entrada.nextInt();
         int[] a = new int[tamaño1]; // inicio el primer array con el tamaño introducido
         System.out.println("Introduce el valor para cada casilla de tu primer array: ");
-
         for (int i = 0; i < tamaño1; i++) {
             int num = entrada.nextInt();
             a[i] = num; //en el array a, en la casilla i, se introduce el valor
@@ -45,11 +44,19 @@ public class ejercicio5 {
             b[i] = num2; //en el array b, en la casilla i, se introduce el valor
         }
 
-
-        //mostramos por pantalla el resultado
-        System.out.println("Unidos serian: " + concatena(a,b));
-
-
+        int[] resultado = concatena (a,b);
+        //mostramos por pantalla el resultado, hay que imprimir casilla por casilla
+        System.out.print("Unidos serian: ");
+        for (int i = 0; i < resultado.length; i++) {
+            System.out.print(resultado[i]);
+            if (i<resultado.length-1) {
+                System.out.print(", ");
+            }
+            else{
+                System.out.println();
+            }
+        }
+        
 
     }
 }        
